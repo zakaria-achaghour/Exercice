@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+         crossorigin="anonymous" 
+         referrerpolicy="no-referrer" />
+         <link rel="stylesheet" href="style.css">
+         <title>Exercice</title>
+</head>
+<body>
+
+ <div class="container">
+    <div class="panel">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date de création</th>
+                <th>Etat</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Nom d'utilisateur</th>
+                <th>Matricule</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+    </div>
+    <div class="panel">
+        <div class="row">
+            <div class="col-md">
+            <button  class="button float-right showForm">Ajouter utilisateur</button>
+            </div>
+       </div>
+    </div>
+    <div class="backdrop"></div>
+
+      <div class="modal" >
+          <div class=" ">
+            <h4 class="card-title"> Ajout d'utilisateurs</h4>
+
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                         <div class="form-group">
+                             <label for="lastName">Nom</label>
+                             <input type="text" class="form-control" name="lastName" id="lastName" >
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                         <div class="form-group">
+                             <label for="firstName">Prénom</label>
+                             <input type="text" class="form-control" name="firstName" id="firstName" >
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                         <div class="form-group">
+                             <label for="">Etat</label>
+                             <select class="form-control" id="status">
+                                 <option selected></option>
+                                 <option value="En validation">En validation</option>
+                                 <option value="Validé">Validé</option>
+                                 <option value="Rejeté">Rejeté</option>
+                               </select>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                     <div class="col-md-4">
+                         <div class="form-group">
+                             <label for="userName">Nom d'utilisateur</label>
+                             <input type="text" class="form-control" id="userName" name="userName">
+                           </div>
+                     </div>
+                     <div class="col-md-4">
+                         <div class="form-group">
+                             <label for="createdDate">Date de Création</label>
+                             <input type="date" class="form-control" id="createdDate" name="userName">
+                           </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-md-4">
+                         <div class="form-group">
+                             <label for="registrationNumber">Matricule</label>
+                             <input type="text" class="form-control" id="registrationNumber" name="registrationNumber">
+                           </div>
+                     </div>
+                 </div>
+                 </form>
+                  <div class="row">
+                    <div class="col-md">
+                    <button onclick="CreateUser()"  class="button float-right enregistrer">Enregistrer</button>
+                    </div>
+               </div>
+            </div>
+          </div>
+         
+     
+      </div>
+  </div>
+    <script src="./app.js"></script>
+</body>
+</html>
